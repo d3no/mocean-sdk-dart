@@ -115,3 +115,6 @@ modules.xml
 
 coverage/
 test/.test_coverage.dart
+
+project
+coverage_badge.svg
