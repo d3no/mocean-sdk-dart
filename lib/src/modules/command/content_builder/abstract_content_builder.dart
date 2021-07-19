@@ -1,14 +1,8 @@
 import 'package:moceansdk/moceansdk.dart';
 import 'package:moceansdk/src/utils.dart';
 
-abstract class AbstractMc {
-
+abstract class AbstractContentBuilder {
   Map params = {};
-
-  AbstractMc([params]) {
-    params ??= {};
-    this.params = params;
-  }
 
   Map get requestData {
     for (var required in this.requiredKey()) {
@@ -18,11 +12,11 @@ abstract class AbstractMc {
       }
     }
 
-    this.params['action'] = this.action();
+    this.params['type'] = this.type();
     return this.params;
   }
 
   List requiredKey();
 
-  String action();
+  String type();
 }

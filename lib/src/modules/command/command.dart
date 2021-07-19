@@ -15,7 +15,7 @@ class Command extends AbstractClient {
   }
 
   set moceanCommand(value) {
-    if (value is McBuilder) {
+    if (value is CommandMcBuilder) {
       this.params['mocean-command'] = json.encode(value.build());
     } else if (value is AbstractMc) {
       this.params['mocean-command'] = json.encode([value.requestData]);

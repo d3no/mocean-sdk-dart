@@ -7,7 +7,6 @@ import '../../testing_utils.dart';
 
 main() {
   Mocean mocean;
-
   objectTest(res) {
     expect(res, isA<Map>());
     expect(res['status'], equals(0));
